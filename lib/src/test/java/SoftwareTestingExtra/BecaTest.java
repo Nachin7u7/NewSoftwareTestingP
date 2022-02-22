@@ -27,4 +27,20 @@ public class BecaTest {
 		Assertions.assertEquals(actualResult, expectedResult, "ERROR");
 	}
 
+	@Test
+	public void showBeca2() {
+		Beca beca = new Beca(nota);
+		String actualResult = beca.recomendacionBeca(51231);
+		String expectedResult = "SI APLICA A BECA";
+		Assertions.assertEquals(actualResult, expectedResult, "ERROR");
+	}
+
+	@Test
+	public void showBeca3() {
+		Beca beca = new Beca(nota);
+		String actualResult = beca.recomendacionBeca(20177);
+		String expectedResult = "NO APLICA A BECA POR PROMEDIO ACADEMICO";
+		Assertions.assertEquals(actualResult, expectedResult, "ERROR");
+	}
+
 }
